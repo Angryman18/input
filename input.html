@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+    <style>
+
+        :root {
+            --form-width: 400px;
+            --form-height: 50px;
+        }
+
+        body {
+            overflow-x: hidden;
+            overflow-y: hidden;
+            font-family: sans-serif;
+        }
+
+        .main {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-section {
+            width: var(--form-width);
+            height: var(--form-height);
+            position: relative;
+        }
+
+        .input {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            padding-top: 20px;
+            padding-bottom: 4px;
+            padding-left: 10px;
+            font-size: 1.2rem;
+            color: rgba(0,0,0,0.9);
+        }
+
+        label {
+            position: absolute;
+            bottom: 15px;
+            left: 10px;
+            pointer-events: none;
+            color: rgba(0,0,0,0.7);
+            transition: 0.3s ease;
+        }
+        .input:focus + label, .input:valid + label {
+            bottom: 30px;
+            font-size: 14px;
+            color: dodgerblue;
+            font-weight: 400;
+        }
+
+    </style>
+</head>
+<body>
+
+    
+    <div class="main">
+        <form class="demo-form">
+            <div class="form-section">
+                <input type="text" id="username" class="input" required />
+                <label for="username">Username</label>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
